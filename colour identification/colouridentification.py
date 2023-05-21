@@ -3,6 +3,12 @@ import pandas as pd
 
 img_path = 'assests/image.jpg'
 img = cv2.imread(img_path)
+window_width = 800  
+window_height = 600  
+img = cv2.resize(img, (window_width, window_height))
+cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('image', window_width, window_height)
+
 
 clicked = False
 r = g = b = x_pos = y_pos = 0
